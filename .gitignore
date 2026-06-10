@@ -1,0 +1,77 @@
+# ====================================================================
+# 1. PYTHON & MACHINE LEARNING (water-ml) GITIGNORE
+# ====================================================================
+# Sanal ortamlar (Sadece kendi bilgisayarında kalmalı)
+**/venv/
+**/.venv/
+**/env/
+**/ENV/
+
+# Python derleme ve cache dosyaları
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+
+# Büyük Veri setleri ve Eğitilmiş Modeller (GitHub sınırı 100MB'dır, pkl/csv yüklenmemeli)
+**/*.pkl
+**/*.csv
+**/*.png
+# Not: Eğer confusion_matrix.png'yi özellikle göstermek istiyorsan, 
+# bu dosyanın yer aldığı klasörde terminale "git add -f confusion_matrix.png" yazabilirsin.
+
+# ====================================================================
+# 2. FRONTEND VITE & NODE (water-quality-ui) GITIGNORE
+# ====================================================================
+# Bağımlılıklar (npm install ile her yerde kurulabilir, çok ağırdır)
+**/node_modules/
+**/jspm_packages/
+
+# Derleme çıktıları (Build klasörleri)
+**/dist/
+**/dist-ssr/
+**/*.local
+
+# Log dosyaları
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+
+# ====================================================================
+# 3. BACKEND SPRING BOOT & JAVA (WaterTemp-main) GITIGNORE
+# ====================================================================
+# Maven derleme klasörü (Çok fazla .class dosyası içerir)
+**/target/
+**/*.class
+
+# Eclipse / STS / VS Code özel proje dosyaları
+**/.project
+**/.classpath
+**/.settings/
+**/.factorypath
+
+# IntelliJ IDEA özel dosyaları
+**/.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+
+# NetBeans
+**/nbproject/private/
+**/nbbuild/
+**/dist/
+**/nbdist/
+
+# ====================================================================
+# 4. GENEL / SİSTEM DOSYALARI (Çevre Değişkenleri & OS)
+# ====================================================================
+# Hassas veriler ve API anahtarları (Şifreler/Portlar barındırabilir)
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# İşletim sistemi dosyaları
+**/Thumbs.db
+**/.DS_Store

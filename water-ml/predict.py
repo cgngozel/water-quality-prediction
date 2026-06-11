@@ -28,7 +28,7 @@ def predict_water(data):
         "threshold_used": custom_threshold
     }
 
-# Feature importance kısmı
+# Feature importance 
 importance = model.named_steps[
     "model"
 ].feature_importances_

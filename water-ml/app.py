@@ -5,18 +5,17 @@ from predict import predict_water
 
 app = FastAPI()
 
-# Spring Boot veya React'ın doğrudan erişebilmesi için CORS izinleri
+# cors
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Güvenlik için buraya sadece Spring'in adresini de yazabilirsiniz (örn: "http://localhost:8080")
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Gelen verinin şemasını ve sınırlarını tanımlıyoruz (Validation)
-# DEĞİŞİKLİK: Water_Temperature, Air_Temperature, Month, Day, Time_of_Day alanları kaldırıldı.
+#Validation
 class WaterQualityInput(BaseModel):
-    pH: float = Field(..., ge=0.0, le=14.0, description="pH değeri 0-14 arasında olmalı")
+    pH: float = Field(..., ge=0.0, le=14.0, description="pH value must be between 0-14 ")
     Iron: float = Field(..., ge=0.0)
     Nitrate: float = Field(..., ge=0.0)
     Chloride: float = Field(..., ge=0.0)
@@ -40,7 +39,7 @@ class WaterQualityInput(BaseModel):
 @app.post("/predict")
 def predict(data: WaterQualityInput): 
     try:
-        # Pydantic nesnesini predict_water fonksiyonunun beklediği sözlük (dict) formatına çeviriyoruz
+    
         input_dict = data.model_dump(by_alias=True)
         
         result = predict_water(input_dict)

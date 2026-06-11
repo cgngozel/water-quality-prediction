@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/water-quality")
-@CrossOrigin(originPatterns = "*", allowCredentials = "true")
+@CrossOrigin(origins="http://localhost:5173")
 public class WaterQualityCont {
 
     @Autowired

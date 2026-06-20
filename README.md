@@ -1,4 +1,4 @@
-# AquaPredict: AI-Based Water Quality Prediction System 💧
+# AquaPredict: AI-Based Water Quality Prediction System 
 
 AquaPredict AI is an enterprise-grade, multi-tier environmental engineering software system designed to predict, monitor, and catalog water quality metrics in real-time.
 
@@ -6,7 +6,7 @@ Operating at the intersection of full-stack software architecture and supervised
 
 ---
 
-## 🏗️ Repository Architecture (Monorepo)
+## Repository Architecture (Monorepo)
 
 This project is organized as a decoupled, loosely coupled multi-tier ecosystem to enforce structural security, high horizontal scalability, and a strict separation of concerns.
 
@@ -19,29 +19,21 @@ water-quality-prediction/
 
 ---
 
-## 📊 Dataset & Pre-trained Model Setup
+## Dataset & Pre-trained Model Setup
 
 To maintain a lightweight and optimized code repository, large data and binary model files are managed externally via version control exclusions.
 
-### 📂 Download Dataset (.csv)
-
-Download the Water Quality Dataset and place it inside:
-
-```text
-water-ml/water quality prediction.csv
-```
-
-### 🧠 Download Pre-trained Model (.pkl)
+### Download Pre-trained Model (.pkl)
 
 Download the trained model file and place it inside:
 
 ```text
 water-ml/su_kalite_modeli_2.pkl
 ```
-
+https://drive.google.com/drive/folders/1hyrjloigMP-QdNd16hCC49XeSNzQFupC?usp=drive_link
 ---
 
-## 🚀 Microservices Architecture
+## Microservices Architecture
 
 ### 1. Machine Learning Core Layer (`water-ml`)
 
@@ -116,7 +108,7 @@ This ensures the model focuses exclusively on true water chemistry characteristi
 
 ---
 
-## 🛠️ Local Installation & Setup
+## Local Installation & Setup
 
 Run all three services in separate terminal windows.
 
@@ -226,6 +218,6 @@ The optimized ImbPipeline was evaluated using an independent 20% validation spli
 
 ---
 
-## 📝 License
+## License
 
 Distributed under the MIT License.

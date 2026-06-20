@@ -21,7 +21,8 @@ water-quality-prediction/
 
 ## Dataset & Pre-trained Model Setup
 
-To maintain a lightweight and optimized code repository, large data and binary model files are managed externally via version control exclusions.
+To maintain a lightweight and optimized code repository, large data and binary model files are managed externally via version control exclusions. Download the dataset or pre-trained model from provided link.
+https://drive.google.com/drive/folders/1hyrjloigMP-QdNd16hCC49XeSNzQFupC?usp=drive_link
 
 ### Download Pre-trained Model (.pkl)
 
@@ -30,8 +31,15 @@ Download the trained model file and place it inside:
 ```text
 water-ml/su_kalite_modeli_2.pkl
 ```
-https://drive.google.com/drive/folders/1hyrjloigMP-QdNd16hCC49XeSNzQFupC?usp=drive_link
 ---
+
+### Download Dataset (.csv)
+
+Download the Water Quality Dataset and place it inside:
+
+```text
+water-ml/water quality prediction.csv
+```
 
 ## Microservices Architecture
 
